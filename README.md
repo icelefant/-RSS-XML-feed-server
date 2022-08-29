@@ -1,14 +1,11 @@
 
 # ++ RSS XML Feed Server ++
-===========================
-
 Dieses Projekt ist ein Node-Port der ursprünglichen Google App Engine-Anwendung „rstodolist“.
 Für mehr Zuverlässigkeit und Privatsphäre empfehle ich Ihnen, diese Anwendung selbst zu hosten.
 
 
 ## Für Node & MariaDB :
 =======================
-
 
 ## Raspi 3B+ :
 Die Anwendung ist hier aber speziell nur für den "Raspi 3B+" instlliert und getestet worden.
@@ -53,11 +50,10 @@ https://pm2.io/docs/runtime/guide/installation/
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
 
 ## npm:
-=======
 ```
 npm --version
 8.18.0
-
+```
 ```
 npm install
 npm start
@@ -97,11 +93,9 @@ CREATE TABLE `feeds_feedentry` (
 
 
 ## Fehlerbehebung :
-===================
 Nutze die folgenden Sprüche über Mängel und Fehler, um dir für immer bewusst zu machen, dass falsche Entscheidungen auch neue Türen öffnen können. Fehler Zitate 1 - 10 „Wenn du keine Fehler machst, dann sind die Probleme, an denen du arbeitest, nicht schwierig genug. Und das ist ein grosser Fehler." (Frank Wilczek)
 
 ## Lizenz :
-==========
 MIT
 
 +++
