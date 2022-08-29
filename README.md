@@ -2,7 +2,7 @@
 # ++ RSS XML Feed Server ++
 Dieses Projekt ist ein Node-Port der ursprünglichen Google App Engine-Anwendung „rsstodolist“.
 Für mehr Zuverlässigkeit und Privatsphäre empfehle ich Ihnen, diese Anwendung selbst zu hosten.
-
+Das Add-Ons für Firefox und aus dem Chrome Web Store sind zu empfehlen-
 
 ## Für Node & MariaDB :
 
