@@ -30,7 +30,6 @@ Raspberry Pi Imager ist die schnelle und einfache Möglichkeit, ein Betriebssyst
 
     
 ## Nodejs :
-===========
 Installieren Sie Node.js und npm aus dem NodeSource-Repository.
 z.B.
  
@@ -48,7 +47,6 @@ nvm --version
 
 
 ## pm2 :
-========
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
 
@@ -81,7 +79,6 @@ sudo dpkg -i dbeaver-ce_latest_amd64.d |https://dbeaver.io/download/
 
 
 ##  mysql -u rsstodolist -p :
-=============================
 rsstodolist Database/Tabellen erstellen:
 
 -- rsstodolist.feeds_feedentry definition
