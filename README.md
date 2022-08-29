@@ -41,10 +41,13 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs
 
 node --version
+
 v16.17.0
+
 
 Check: 
 nvm --version
+
 0.39.1
 
 
@@ -59,10 +62,12 @@ https://pm2.io/docs/runtime/guide/installation/
 npm:
 ====
 npm --version
+
 8.18.0
 
-+++
+
 npm install
+
 
 npm start   
 
@@ -77,7 +82,9 @@ Aber vorher bitte install MariaDB:
 sudo apt install mariadb-server
 
 ..für später eine GUI installieren um über remote die Database einfacher einzusehen/bearbeiten/modifizieren! 
+
 install:
+
 sudo dpkg -i dbeaver-ce_latest_amd64.d |https://dbeaver.io/download/
 
 
