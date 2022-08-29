@@ -31,12 +31,14 @@ Installieren Sie Node.js und npm aus dem NodeSource-Repository.
 z.B.
  
 curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
-
+```
 sudo apt install nodejs
-
+```
+```
 node --version
 v16.17.0
-
+```
+```
 Check: 
 nvm --version
 0.39.1
