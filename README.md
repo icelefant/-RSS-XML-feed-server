@@ -29,8 +29,9 @@ Raspberry Pi Imager ist die schnelle und einfache Möglichkeit, ein Betriebssyst
 ## Nodejs :
 Installieren Sie Node.js und npm aus dem NodeSource-Repository.
 z.B.
- 
+```shell
 curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+
 ```shell
 sudo apt install nodejs
 
