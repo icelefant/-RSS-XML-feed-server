@@ -47,14 +47,12 @@ Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
 ```
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
-```
+```shell
 ## npm:
-```
 npm --version
 
 8.18.0
 
-```
 npm install
 npm start
 ```
@@ -64,12 +62,12 @@ npm start
 Führen Sie die Migrationsdatei aus hier sind grundlegende Datenbank kentnisser erforderlich.
 Migrationsdatei ./rssdolist.sql ++ um die Datenbank rsstodolist zu erstellen. 
 Aber vorher bitte install MariaDB:
-```
+```shell
 sudo apt install mariadb-server
 ```
 ..für später eine GUI installieren um über remote die Database einfacher einzusehen/bearbeiten/modifizieren! 
 install:
-```
+```shell
 sudo dpkg -i dbeaver-ce_latest_amd64.d |https://dbeaver.io/download/
 ```
 
