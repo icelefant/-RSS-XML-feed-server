@@ -48,7 +48,7 @@ nvm --version
 ## pm2 :
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
-
+```
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
 
 ## npm:
