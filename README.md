@@ -31,20 +31,17 @@ Installieren Sie Node.js und npm aus dem NodeSource-Repository.
 z.B.
  
 curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
-```
+```shell
 sudo apt install nodejs
-```
-```
+
 node --version
 v16.17.0
-```
-```
-Check: 
-```
-nvm --version
-```
-0.39.1
 
+Check: 
+
+nvm --version
+0.39.1
+```
 ## pm2:
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
@@ -57,7 +54,6 @@ npm --version
 
 8.18.0
 
-```
 ```
 npm install
 npm start
