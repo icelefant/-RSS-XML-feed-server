@@ -40,17 +40,17 @@ v16.17.0
 ```
 ```
 Check: 
+```
 nvm --version
 0.39.1
-
-
+```
 
 ## pm2 :
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
 ```
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
-
+```
 ## npm:
 ```
 npm --version
