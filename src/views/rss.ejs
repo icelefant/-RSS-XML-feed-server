@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="./static/rss.xslt"?>
+<rss version="2.0">
+  <channel>
+    <title>RSS Todo List - <%= name %></title>
+    <link><%= rootUrl %>/?n=<%= name %></link>
+    <description>RSS 2.0 feed +++ mit Ihren Todolist-Einträgen +++</description>
+    <language>en-us</language>
+    <webMaster>me@paulgreg.me (Grégory PAUL)</webMaster>
+	 <% if (public && entries.length > 5) { %>
+	 	<item>
+			<title>Bitte erwägen Sie selbst zu hosten +rss-to-do-list+</title>
+	 		<link><%= rootUrl %>/</link>
+			<guid isPermaLink="false">0000000002</guid>
+	 		<description>Wenn Sie diesen Dienst vertrauen, sollten Sie den Dienst für mehr Zuverlässigkeit und Privatsphäre selbst hosten.</description>
+	 	</item>
+	 <% } %>
+	 <% entries.forEach(entry => { %>
+	 	<item>
+			<title><%= entry.title %></title>
+	 		<link><%= entry.url %></link>
+	 		<description><%= entry.description || "" %></description>
+			<pubDate><%= (entry.updatedAt || entry.createdAt).toUTCString() %></pubDate>
+			<guid isPermaLink="false">paulgreg@<%= entry.id %></guid>
+	 	</item>
+	 <% }) %>
+	 <% if (entries.length === 0) { %>
+	 	<item>
+			<title>Standardartikel in Ihrem Feed</title>
+	 		<link><%= rootUrl %></link>
+			<guid isPermaLink="false">paulgreg@0000000001</guid>
+	 		<description>Default sample item</description>
+	 	</item>
+	 <% } %>
+	</channel>
+</rss>
+

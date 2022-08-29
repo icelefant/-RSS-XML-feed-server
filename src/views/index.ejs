@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>++rsstodolist++: Eine RSS todo-liste</title>
+        <meta name="robots" content="<%= public ? 'index,follow' : 'noindex,nofollow' %>"/>
+        <meta name="keywords" content="rss todolist, todolist"/>
+        <meta name="author" content="Gr&eacute;gory Paul"/>
+        <meta name="description" content="Eine RSS-basierte Todo-Liste"/>
+        <style type="text/css">
+            body { margin: 0; background-color: #3B7CC0; font-family: sans-serif; }
+            #content { padding: 2%; background-color: white; border-right: 3px solid #159EFE; border-left: 3px solid #159EFE; }
+            h1 { color: #159EFE; }
+            h2 { color: #63ADF5; margin: 1em 0.5em 1em 0.5em; }
+            h3 { color: #3B7CC0; margin-left: 0.5em; }
+            ul { list-style-type: square; }
+            input { margin: .25em; }
+            input[type=submit] { margin: .5em  0; }
+            code { display: block; margin: 0.5em 0; word-break: break-all; }
+            @media (min-width:1024px) {
+                p { margin-left: 4em; }
+                body { margin: 0 5%;  }
+                input[name=url] { width: 90%; }
+                ul { margin-left: 3em; }
+                h3 { margin-left: 2.5em; }
+            }
+        </style>
+        <link rel="icon" type="image/png" href="./static/favicon.png" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <div id="content">
+            <h1>++ rsstodolist ++</h1>
+            <p>++rsstodolist++ ist eine URL-orientierte To-Read-Liste, die auf einem RSS-XML-Feed basiert. 
+              Eine typische Anwendung ist das Speichern von Webseiten zum späteren Lesen in einem RSS-Feed.</p>
+
+            <% if (public) { %>
+
+            <h2>Self-hosting for more privacy &amp; reliability</h2>
+            <p>That service is public and « open », meaning anyone knowing your feed name may see your items, add or remove them.</p>
+            <p>Also, that service is hosted via free plan on heroku with some limitations (app may « sleep » if unused or if quota is reached).</p>
+            <p>So, for more reliability and privacy, I <strong>strongly</strong> suggest you to self-host that application (see <a href="#related">related projects below</a>).</p>
+
+            <% } else { %>
+
+            <h2>Die Feeds liste</h2>
+            <p>Hier ist die "Liste" zu sehen..  <a href="./list">die feeds liste</a>.</p>
+
+            <% } %>
+
+            <h2>Fügen Sie Ihrem Feed eine URL hinzu..</h2>
+
+            <h3>1. Hier eintragen :</h3>
+            <form method="get" action="add">
+                <p>
+                    <label for="url">URL</label>&nbsp;:&nbsp;<input type="url" id="url" name="url" placeholder="https://de.wikipedia.org/"/><br/>
+                    <label for="name">Feed name</label>&nbsp;:&nbsp;<input type="text" id="name" name="name" placeholder="irgend ein Name"/><br/>
+                    <input type="submit" />
+                </p>
+            </form>
+            <h3>2. Durch Aufruf einer URL :</h3>
+            <p><a href="add?name=irgendeinname&amp;url=https://de.wikipedia.org/" rel="nofollow"><%= rootUrl %>/add?name=irgendeinName&amp;url=https://de.wikipedia.org/</a></p>
+            <ul>
+                <li>Standardmäßig wird der Feed-Titel aus dem Titel der Webseite abgerufen. Sie können dies erzwingen, indem Sie den Parameter "&title" verwenden.</li>
+                <li>Außerdem enthält Ihr Feed standardmäßig 25 Elemente. Sie können dies ändern, indem Sie den Parameter "&limit" von 1 auf 500 setzen.</li>
+                <li>Eine Beschreibung für den Link kann mit dem Parameter „description“ hinzugefügt werden</li>
+                <li>Sie können auch kurze Parameter wie "n" für "name", "u" für "url", "t" für "title", "l" für "limit" oder "d" für "description" verwenden: 
+                 <a href="add?n=irgendeinname&amp;u=https://de.wikipedia.org/" rel="nofollow"><%= rootUrl %>/add?n=irgendeinname&amp;u=https://de.wikipedia.org/</a></li>
+            </ul>
+
+            <h3>3. Indem man JavaScript benutzt <a href="https://de.wikipedia.org/wiki/Bookmarklet" title="Erfahren Sie mehr über Bookmarklets auf Wikipedia">Bookmarklet</a> :</h3>
+            <p>Erstellen Sie ein neues Bookmarklet und fügen Sie den folgenden Code in das URL-Feld ein :
+            <code>javascript:var rss=prompt('RSS feed name ?');var r=new XMLHttpRequest();r.open('GET','<%= rootUrl %>/add?                 n='+rss+'&amp;url='+encodeURIComponent(window.location),true);r.setRequestHeader('Content-Type','text/plain;charset=UTF-8');r.onreadystatechange=function(){if(r.readyState==4){alert("Request sent : "+(r.status===200)+" ("+r.status+")");}};r.send(null);</code>
+            Wenn Sie dann auf dieses Lesezeichen klicken, wird die aktuelle Seite zum RSS-Feed hinzugefügt.
+            </p>
+
+            <h3>4. Durch die Verwendung einer Erweiterung (ADD-ONS):</h3>
+            <p>Eine <a href="https://addons.mozilla.org/fr/firefox/addon/rsstodolist/">Firefox addon</a> und
+            <a href="https://chrome.google.com/webstore/detail/rsstodolist/gjnfedompndjcoeannmcppbckbkjhpkd">Chrome extension</a>
+            stehen zur Verfügung. Es wird standardmäßig eine öffentliche Instanz verwendet, aber Sie können dies konfigurieren und selbst hosten.</p>
+
+            <h2>Feed aufrufen/abrufen :</h2>
+            <p><a href="?name=irgendeinname" rel="nofollow"><%= rootUrl %>/?name=irgendeinname</a> or <a href="?n=irgendeinname" rel="nofollow"><%= rootUrl %>/?n=irgendeinname</a></p>
+
+            <h2>Entfernen einer URL aus Ihrem Feed</h2>
+            <h3>Durch Aufruf einer URL :</h3>
+            <p><a href="del?name=irgendeinname&amp;url=https://de.wikipedia.org/" rel="nofollow"><%= rootUrl %>/del?name=irgendeinname&amp;url=https://de.wikipedia.org/</a></p>
+
+            <h2>Feedback</h2>
+            <p>Please contact me via <a href="https://icelefant.de/">-ice-</a> icelefant</p>
+
+            <h2 id="related">Related projects und source code</h2>
+            <ul>
+                <li><a href="https://github.com/paulgreg/rsstodolist-node-server">rsstodolist-node-server</a> : Quellcode für nodejs und MariaDB, die Sie selbst hosten können (kann über Docker ausgeführt werden)</li>
+                <li><a href="https://github.com/paulgreg/rsstodolist-django-server">rsstodolist-django-server</a> : eine Python/Django
+                     Version, die Sie selbst hosten können (wird nicht mehr gewartet)</li>
+                <li><a href="https://github.com/paulgreg/rsstodolist-addon">rsstodolist-addon</a> : Chrome
+                     Erweiterung und Firefox-Addon</li>
+                <li><a href="https://github.com/paulgreg/rsstodolist-react-native">rsstodolist-react-native</a> : eine react-native
+                      Anwendung für Android</li>
+            </ul>
+        </div>
+    </body>
+</html>
+
