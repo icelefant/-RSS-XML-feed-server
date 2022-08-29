@@ -11,7 +11,6 @@ Für mehr Zuverlässigkeit und Privatsphäre empfehle ich Ihnen, diese Anwendung
 
 
 ## Raspi 3B+ :
-==============
 Die Anwendung ist hier aber speziell nur für den "Raspi 3B+" instlliert und getestet worden.
 Der Umgang mit dem Microcomputer sollte aber schon einen von der Hand gehen...
 
@@ -68,7 +67,6 @@ npm start
 
 
 ### Datenbank Installieren und MariaDB-Server :
-===============================================
 Führen Sie die Migrationsdatei aus hier sind grundlegende Datenbank kentnisser erforderlich.
 Migrationsdatei ./rssdolist.sql ++ um die Datenbank rsstodolist zu erstellen. 
 Aber vorher bitte install MariaDB:
@@ -77,8 +75,9 @@ sudo apt install mariadb-server
 ```
 ..für später eine GUI installieren um über remote die Database einfacher einzusehen/bearbeiten/modifizieren! 
 install:
+```
 sudo dpkg -i dbeaver-ce_latest_amd64.d |https://dbeaver.io/download/
-
+```
 
 
 ##  mysql -u rsstodolist -p :
