@@ -43,8 +43,9 @@ nvm --version
 0.39.1
 ```
 ## pm2:
-```shell
+
 Installation | Leitfaden | PM2-Dokumentation
+```shell
 https://pm2.io/docs/runtime/guide/installation/
 ```
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
@@ -52,7 +53,6 @@ https://pm2.io/docs/runtime/guide/installation/
 ## npm:
 ```shell
 npm --version
-
 8.18.0
 
 npm install
