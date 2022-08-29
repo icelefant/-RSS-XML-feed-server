@@ -21,11 +21,12 @@ https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/
 Compatible with :
 
     3B 3B+ 3A+ 4 400 CM3 CM3+ CM4 Zero 2 W
+https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit
 
 Bitte Download der aktuellen Software :
 Raspberry Pi OS with desktop :
 
-https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit
+
 
 Raspberry Pi Imager ist die schnelle und einfache Möglichkeit, ein Betriebssystem auf einer microSD-Karte zu installieren, die mit Ihrem Raspberry Pi verwendet werden kann. Alternativ können Sie eines der folgenden Betriebssysteme auswählen, die heruntergeladen und manuell installiert werden können.
 
