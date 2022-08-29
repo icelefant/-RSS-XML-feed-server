@@ -43,6 +43,7 @@ nvm --version
 0.39.1
 ```
 ## pm2:
+```shell
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
 ```
