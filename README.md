@@ -1,4 +1,4 @@
-++ RSS XML Feed Server ++
+#++ RSS XML Feed Server ++
 =========================
 Selbst Hosting für mehr Privatsphäre &amp; Zuverlässigkeit auf ein Raspi 3B+
 
@@ -57,11 +57,11 @@ pm2 :
 Installation | Leitfaden | PM2-Dokumentation
 https://pm2.io/docs/runtime/guide/installation/
 
-<pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
+###<pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
 
 npm:
 ====
-npm --version
+###npm --version
 
 8.18.0
 
@@ -112,7 +112,7 @@ CREATE TABLE `feeds_feedentry` (
 
 
 
-+++
+##+++
 https://github.com/paulgreg/rsstodolist-node-server
 
 Un grand merci à paulgre
