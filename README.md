@@ -1,4 +1,4 @@
-#++ RSS XML Feed Server ++
+++ RSS XML Feed Server ++
 =========================
 Selbst Hosting für mehr Privatsphäre &amp; Zuverlässigkeit auf ein Raspi 3B+
 
@@ -61,7 +61,7 @@ https://pm2.io/docs/runtime/guide/installation/
 
 npm:
 ====
-###npm --version
+npm --version
 
 8.18.0
 
@@ -109,10 +109,15 @@ CREATE TABLE `feeds_feedentry` (
 
 
 
+Fehlerbehebung :
+================
+Nutze die folgenden Sprüche über Mängel und Fehler, um dir für immer bewusst zu machen, dass falsche Entscheidungen auch neue Türen öffnen können. Fehler Zitate 1 - 10 „Wenn du keine Fehler machst, dann sind die Probleme, an denen du arbeitest, nicht schwierig genug. Und das ist ein grosser Fehler." (Frank Wilczek)
 
+Lizenz :
+========
+MIT
 
-
-##+++
++++
 https://github.com/paulgreg/rsstodolist-node-server
 
 Un grand merci à paulgre
