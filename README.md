@@ -5,10 +5,9 @@ Für mehr Zuverlässigkeit und Privatsphäre empfehle ich Ihnen, diese Anwendung
 
 
 ## Für Node & MariaDB :
-=======================
 
 ## Raspi 3B+ :
-Die Anwendung ist hier aber speziell nur für den "Raspi 3B+" instlliert und getestet worden.
+Die Anwendung ist hier für den "Raspi 3B+" installiert und getestet worden.
 Der Umgang mit dem Microcomputer sollte aber schon einen von der Hand gehen...
 
 install Raspberry Pi OS (64-bit) Specification:
