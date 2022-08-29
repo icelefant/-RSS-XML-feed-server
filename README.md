@@ -49,6 +49,7 @@ https://pm2.io/docs/runtime/guide/installation/
 <pre>pm2 start . --name &apos;rsstodolist-server&apos; --max-memory-restart 128M</pre>
 ```
 ## npm:
+
 npm --version
 
 8.18.0
